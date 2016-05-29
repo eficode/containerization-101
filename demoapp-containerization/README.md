@@ -26,9 +26,9 @@ When not using docker machine:
 * Access with browser: `localhost:7272`
 
 **Pushing to registry:**  
-Login: `docker login $REGISTRY`  
-Tag the image: `docker tag demoappimage:latest $REGISTRY/<yourname>/demoappimage:latest`  
-Push image to registry: `docker push $REGISTRY/<yourname>/demoappimage:latest`
+* Login: `docker login $REGISTRY`  
+* Tag the image: `docker tag demoappimage:latest $REGISTRY/<yourname>/demoappimage:latest`  
+* Push image to registry: `docker push $REGISTRY/<yourname>/demoappimage:latest`
 
 **Cleanup Commands:**
 * Stop the container: `docker stop demoappcontainer`
