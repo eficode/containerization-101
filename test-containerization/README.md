@@ -13,7 +13,7 @@ How to containerize RobotFramework [tests](https://bitbucket.org/robotframework/
 
 **Launch Commands:**
     - Build tests into Docker image: `docker build -t testimage .`
-    - Run tests: `docker run -v $(pwd)/test-output:/robo-tests/output -v $(pwd)/robo-tests:/robo-tests/tests:ro --name testcontainer -it testimage -v SERVER:"$(docker-machine ip slave):7272" -v HEADLESS:True -v RESOURCE:xvfb /robo-tests/tests`
+    - Run tests: `docker run --rm -v $(pwd)/test-output:/robo-tests/output:rw -v $(pwd)/robo-tests:/robo-tests/tests:ro --name testcontainer -it testimage -v SERVER:"$(docker-machine ip slave):7272" -v HEADLESS:True -v RESOURCE:xvfb --outputdir /robo-tests/output /robo-tests/tests`
 
 **Cleanup Commands:**
     - Remove the container: `docker rm testcontainer`
