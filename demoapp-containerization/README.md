@@ -11,8 +11,7 @@ Creating a machine (called slave):
 * Without registry: `docker-machine create -d virtualbox slave`
 * With registry: `docker-machine create -d virtualbox --engine-insecure-registry $REGISTRY slave`  
 * Activate the machine: `eval $(docker-machine env slave)`  
-Deleting the machine:  
-* `docker-machine rm -f slave`
+* Deleting the machine: `docker-machine rm -f slave`
 
 **Launch Commands:**
 * Run the demoapp directly (without container): `python demoapp/server.py`
@@ -26,8 +25,8 @@ When using docker-machine:
 When not using docker machine:  
 * Access with browser: `localhost:7272`
 
-**Pushing to registry:**
-Login: `docker login $REGISTRY`
+**Pushing to registry:**  
+Login: `docker login $REGISTRY`  
 Tag the image: `docker tag demoappimage:latest $REGISTRY/<yourname>/demoappimage:latest`  
 Push image to registry: `docker push $REGISTRY/<yourname>/demoappimage:latest`
 
