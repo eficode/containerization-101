@@ -19,6 +19,7 @@ Creating a machine (called jira):
 When using docker-machine:  
 * Get the ip: `docker-machine ip jira`  
 * Access with browser: `http://<machine ip>`  
+
 When not using docker machine:  
 * Access with browser: `http://localhost`
 
