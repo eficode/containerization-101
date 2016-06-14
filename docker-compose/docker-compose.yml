@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  db:
+    image: mysql:5.6
+    volumes:
+      - ./db/my.cnf:/etc/mysql/my.cnf:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: jiradb
+      MYSQL_USER: jira
+      MYSQL_PASSWORD: sphere
+    ports:
+      - "3306:3306"
+
+  jira:
+    build: ./jira/.
+    ports:
+      - "80:8080"
+    links:
+      - db

@@ -12,7 +12,7 @@ Containerize jira with compose: `cd docker-compose`
 
 ## Containerization Instructions
 [demoapp-containerization](demoapp-containerization/README.md)  
-[test-containerization](test-containerization/README.md)
+[test-containerization](test-containerization/README.md)  
 [jira-containerization with compose](docker-compose/README.md)  
 
 Godspeed.
