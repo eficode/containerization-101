@@ -15,7 +15,7 @@ Creating a machine (called jira):
 * Build and Run: `docker-compose up -d`
 * See logs: `docker-compose logs`
 
-**Accessing the application:**
+**Accessing the application:**  
 When using docker-machine:  
 * Get the ip: `docker-machine ip jira`  
 * Access with browser: `http://<machine ip>`  
